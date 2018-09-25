@@ -51,10 +51,10 @@ th:text在某个标签里就会替代标签里原本的值
 
 
 
-	`<div th:object="${Student}">
-		<p>Student Id: <span th:text=*{id}></span></p>
-		<p>Student Name: <span th:text=*{name}></span></p>
-	</div>`
+	`<div th:object="${Student}">`
+		`<p>Student Id: <span th:text=*{id}></span></p>`
+		`<p>Student Name: <span th:text=*{name}></span></p>`
+	`</div>`
 
 
  - 获取国际化内容#{..}
@@ -84,24 +84,24 @@ th:text在某个标签里就会替代标签里原本的值
  - 支持条件运算(三元运算符)
 	 
 
-	`<div th:utext="${3>=5}"></div>
-	<div th:utext="${1+2}"></div>
-	<div th:utext="${true||false}"></div>
-	<div th:utext="${(1+2>2)?(3):(2)}"></div>
-	<div th:switch="${user.role}">
-	  <p th:case="'admin'">User is an administrator</p>
-	  <p th:case="#{roles.manager}">User is a manager</p>
-	  <p th:case="*">User is some other thing</p>
-	</div>`
+	`<div th:utext="${3>=5}"></div>`
+	`<div th:utext="${1+2}"></div>`
+	`<div th:utext="${true||false}"></div>`
+	`<div th:utext="${(1+2>2)?(3):(2)}"></div>`
+	`<div th:switch="${user.role}">`
+	  `<p th:case="'admin'">User is an administrator</p>`
+	  `<p th:case="#{roles.manager}">User is a manager</p>`
+	  `<p th:case="*">User is some other thing</p>`
+	`</div>`
 	
 
 th:text 和 th:utext的区别，前者会对特殊字符进行转义，后者不会进行转义
  - 	对数组进行遍历
 
 
-	`<h4>
-		<span th:each="user: ${users}">[[${user}]]</span>
-	</h4>`
+	`<h4>`
+		`<span th:each="user: ${users}">[[${user}]]</span>`
+	`</h4>`
 
 
 以上有几点需要注意的
