@@ -21,8 +21,7 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 1. 导入thymeleaf的名称空间
 
 
-    <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
+    `<html lang="en" xmlns:th="http://www.thymeleaf.org">`
 
 
 2. 表达式使用
@@ -33,14 +32,14 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 
 
 
-    <div th:utext="${hello}"></div>
+    `<div th:utext="${hello}"></div>
 	<div th:utext="${#locale.country}"></div>
 	<div th:utext="${Student.show('abc')}"></div>
 	<div th:utext="${session.testSession}"></div>
 	<div th:utext="${session.isEmpty()}"></div>
 	<div th:utext="${session.size()}"></div>
 	<h1 th:text=${#dates.createNow()}></h1>
-	<div th:utext="${#strings.contains('aabbccabc','abc')}"></div> 
+	<div th:utext="${#strings.contains('aabbccabc','abc')}"></div> `
 
 
 
@@ -52,19 +51,17 @@ th:text在某个标签里就会替代标签里原本的值
 
 
 
-
-	<div th:object="${Student}">
+	`<div th:object="${Student}">
 		<p>Student Id: <span th:text=*{id}></span></p>
 		<p>Student Name: <span th:text=*{name}></span></p>
-	</div>  
-
+	</div>`
 
 
  - 获取国际化内容#{..}
  
 
 
-	<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>	
+	`<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>`
 
 
 
@@ -74,8 +71,8 @@ th:text在某个标签里就会替代标签里原本的值
 提交值来跳转页面不需要在url后拼接?xxxx= 而是
 
 
-	<link th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.css}" rel="stylesheet">
-	<img class="mb-4" th:src="@{asserts/img/bootstrap-solid.svg}" />
+	`<link th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.css}" rel="stylesheet">
+	<img class="mb-4" th:src="@{asserts/img/bootstrap-solid.svg}" />`
 
 
 
@@ -87,8 +84,7 @@ th:text在某个标签里就会替代标签里原本的值
  - 支持条件运算(三元运算符)
 	 
 
-
-	<div th:utext="${3>=5}"></div>
+	`<div th:utext="${3>=5}"></div>
 	<div th:utext="${1+2}"></div>
 	<div th:utext="${true||false}"></div>
 	<div th:utext="${(1+2>2)?(3):(2)}"></div>
@@ -96,25 +92,21 @@ th:text在某个标签里就会替代标签里原本的值
 	  <p th:case="'admin'">User is an administrator</p>
 	  <p th:case="#{roles.manager}">User is a manager</p>
 	  <p th:case="*">User is some other thing</p>
-	</div>
-
-
-
+	</div>`
+	
 
 th:text 和 th:utext的区别，前者会对特殊字符进行转义，后者不会进行转义
  - 	对数组进行遍历
 
 
-
-
-	<h4>
+	`<h4>
 		<span th:each="user: ${users}">[[${user}]]</span>
-	</h4>
-
+	</h4>`
 
 
 以上有几点需要注意的
  th:each 写在哪个标签里，哪个标签在遍历的时候就会重复出现，以上代码是重复出现<span>标签
  thymeleaf模板不像jsp页面，可以直接引用变量，需要遵从行内写法的语法规则
+
 **[[..]]** - - - - - 相当于 th:text
 **[(..)]** - - - - - 相当于 th:utext
