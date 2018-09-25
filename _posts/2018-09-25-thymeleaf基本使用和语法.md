@@ -40,7 +40,6 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 		<h1 th:utext="${session.testSession}"></h1>
 		<h1 th:utext="${session.isEmpty()}"></h1>
 		<h1 th:utext="${session.size()}"></h1>
-		<h1 th:text=${#dates.createNow()}></h1>
 		<h1 th:utext="${#strings.contains('aabbccabc','abc')}"></h1>
 
 
