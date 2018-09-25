@@ -22,7 +22,7 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 
 
 
-    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+    xmlns:th="http://www.thymeleaf.org"
 
 
 
@@ -43,6 +43,7 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 	<div th:utext="${session.size()}"></div>
 	<h1 th:text=${#dates.createNow()}></h1>
 	<div th:utext="${#strings.contains('aabbccabc','abc')}"></div>
+
 
 
 
@@ -104,8 +105,9 @@ th:text 和 th:utext的区别，前者会对特殊字符进行转义，后者不
 
 
 
+
 	<h4>
-		<span th:each="user: ${users}">[[${user}]]</span>`
+		<span th:each="user: ${users}">[[${user}]]</span>
 	</h4>
 
 
