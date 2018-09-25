@@ -34,14 +34,14 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 
 
 	
-	    <div th:utext="${hello}"></div>
-		<div th:utext="${#locale.country}"></div>
-		<div th:utext="${Student.show('abc')}"></div>
-		<div th:utext="${session.testSession}"></div>
-		<div th:utext="${session.isEmpty()}"></div>
-		<div th:utext="${session.size()}"></div>
+	    <h1 th:utext="${hello}"></h1>
+		<h1 th:utext="${#locale.country}"></h1>
+		<h1 th:utext="${Student.show('abc')}"></h1>
+		<h1 th:utext="${session.testSession}"></h1>
+		<h1 th:utext="${session.isEmpty()}"></h1>
+		<h1 th:utext="${session.size()}"></h1>
 		<h1 th:text=${#dates.createNow()}></h1>
-		<div th:utext="${#strings.contains('aabbccabc','abc')}"></div>
+		<h1 th:utext="${#strings.contains('aabbccabc','abc')}"></h1>
 
 
 
