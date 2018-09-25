@@ -33,6 +33,7 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 可以使用内置的一些工具对象
 
 
+	
 	    <div th:utext="${hello}"></div>
 		<div th:utext="${#locale.country}"></div>
 		<div th:utext="${Student.show('abc')}"></div>
@@ -41,6 +42,7 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 		<div th:utext="${session.size()}"></div>
 		<h1 th:text=${#dates.createNow()}></h1>
 		<div th:utext="${#strings.contains('aabbccabc','abc')}"></div>
+
 
 
 th:text在某个标签里就会替代标签里原本的值
