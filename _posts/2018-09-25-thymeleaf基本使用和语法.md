@@ -33,14 +33,15 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 
 
 	
-	    <h1 th:utext="${hello}"></h1>
-		<h1 th:utext="${#locale.country}"></h1>
-		<h1 th:utext="${Student.show('abc')}"></h1>
-		<h1 th:utext="${session.testSession}"></h1>
-		<h1 th:utext="${session.isEmpty()}"></h1>
-		<h1 th:utext="${session.size()}"></h1>
-		<h1 th:text=${#dates.createNow()}></h1>
-		<h1 th:utext="${#strings.contains('aabbccabc','abc')}"></h1>
+		    <h1 th:utext="${hello}"></h1>
+			<h1 th:utext="${#locale.country}"></h1>
+			<h1 th:utext="${Student.show('abc')}"></h1>
+			<h1 th:utext="${session.testSession}"></h1>
+			<h1 th:utext="${session.isEmpty()}"></h1>
+			<h1 th:utext="${session.size()}"></h1>
+			<h1 th:text=${#dates.createNow()}></h1>
+			<h1 th:utext="${#strings.contains('aabbccabc','abc')}"></h1>
+
 
 
 
@@ -87,16 +88,18 @@ th:text在某个标签里就会替代标签里原本的值
 	 
 
 
-		<div th:utext="${3>=5}"></div>
-		<div th:utext="${1+2}"></div>
-		<div th:utext="${true||false}"></div>
-		<div th:utext="${(1+2>2)?(3):(2)}"></div>
-		<div th:switch="${user.role}">
-		  <p th:case="'admin'">User is an administrator</p>
-		  <p th:case="#{roles.manager}">User is a manager</p>
-		  <p th:case="*">User is some other thing</p>
-		</div>
+
+			<div th:utext="${3>=5}"></div>
+			<div th:utext="${1+2}"></div>
+			<div th:utext="${true||false}"></div>
+			<div th:utext="${(1+2>2)?(3):(2)}"></div>
+			<div th:switch="${user.role}">
+			  <p th:case="'admin'">User is an administrator</p>
+			  <p th:case="#{roles.manager}">User is a manager</p>
+			  <p th:case="*">User is some other thing</p>
+			</div>
 	
+
 
 th:text 和 th:utext的区别，前者会对特殊字符进行转义，后者不会进行转义
  - 	对数组进行遍历
