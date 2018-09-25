@@ -33,9 +33,6 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 可以使用内置的一些工具对象
 
 
-
-
-
 	    <div th:utext="${hello}"></div>
 		<div th:utext="${#locale.country}"></div>
 		<div th:utext="${Student.show('abc')}"></div>
@@ -46,8 +43,6 @@ springBoot提供的thymeleaf版本会远远低于先行版本所以需要覆盖�
 		<div th:utext="${#strings.contains('aabbccabc','abc')}"></div>
 
 
-
-
 th:text在某个标签里就会替代标签里原本的值
 
 - 选择变量表达式\*{..}
@@ -56,17 +51,17 @@ th:text在某个标签里就会替代标签里原本的值
 
 
 
-			<div th:object="${Student}">
-				<p>Student Id: <span th:text=*{id}></span></p>
-				<p>Student Name: <span th:text=*{name}></span></p>
-			</div>	
+		<div th:object="${Student}">
+			<p>Student Id: <span th:text=*{id}></span></p>
+			<p>Student Name: <span th:text=*{name}></span></p>
+		</div>	
 
 
  - 获取国际化内容#{..}
  
 
 
-			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
+		<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
 
 
 
