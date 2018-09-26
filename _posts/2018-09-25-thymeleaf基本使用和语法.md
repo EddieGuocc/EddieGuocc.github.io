@@ -1,3 +1,11 @@
+---
+layout: post
+date:   2018-09-25 14:18:02
+categories: springBoot 学习笔记
+tags: springBoot thymeleaf
+mathjax: true
+---
+
 # SpringBoot thymeleaf模板引擎
 
 结合了通过模板引擎使html页面集成了页面对数据的处理功能，如下图：
