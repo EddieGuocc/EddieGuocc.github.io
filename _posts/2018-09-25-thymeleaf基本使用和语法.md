@@ -128,3 +128,31 @@ th:text 和 th:utext的区别，前者会对特殊字符进行转义，后者不
 
 * **[[..]]** - - - - - 相当于 th:text
 * **[(..)]** - - - - - 相当于 th:utext
+
+3. thymeleaf公共页面的抽取
+- 抽取公共片段
+
+
+    <p class="mt-5 mb-3 text-muted" th:fragment="copyright">© 2017-2018</p>
+
+
+利用**th:fragment**属性，将引用的区域命名
+- 引入公共片段
+
+
+	<div th:insert="~{index :: copyright}"></div>
+
+
+其中**~{A :: B}**中内容的规则为A区域写所引用的原页面的名称，B区域为原页面引用部分的名字，也就是**th:fragment**属性中的名字，行内写法 [[~{A :: B}]] [(~{A :: B})]
+
+除了insert还有include和replace这两个关键字
+
+
+	<div th:replace="~{index :: copyright}"></div>
+	<div th:include="~{index :: copyright}"></div>
+
+
+**区别(此处的原有片段指新页面)**
+**insert 是在原有片段里直接插入公共片段**
+**replace 是用公共片段直接代替了原有的标签**
+**include 是将公共片段的内容抽取出来，再放入原有片段中**
