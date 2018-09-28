@@ -132,13 +132,11 @@ th:text 和 th:utext的区别，前者会对特殊字符进行转义，后者不
 3. thymeleaf公共页面的抽取
 
 - 抽取公共片段
-利用**th:fragment**属性，将引用的区域命名，代码如下：
-
+利用**th:fragment**属性，将引用的区域命名，代码如下:
 
 
 
     	<p class="mt-5 mb-3 text-muted" th:fragment="copyright">© 2017-2018</p>
-
 
 
 
@@ -157,8 +155,8 @@ th:text 和 th:utext的区别，前者会对特殊字符进行转义，后者不
 除了insert还有include和replace这两个关键字
 
 
-	<div th:replace="~{index :: copyright}"></div>
-	<div th:include="~{index :: copyright}"></div>
+		<div th:replace="~{index :: copyright}"></div>
+		<div th:include="~{index :: copyright}"></div>
 
 
 **区别(此处的原有片段指新页面)**
