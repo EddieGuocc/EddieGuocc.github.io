@@ -136,7 +136,10 @@ th:text 和 th:utext的区别，前者会对特殊字符进行转义，后者不
 
 
 
-    <p class="mt-5 mb-3 text-muted" th:fragment="copyright">© 2017-2018</p>
+
+    	<p class="mt-5 mb-3 text-muted" th:fragment="copyright">© 2017-2018</p>
+
+
 
 
 
@@ -145,7 +148,9 @@ th:text 和 th:utext的区别，前者会对特殊字符进行转义，后者不
 
 
 
-	<div th:insert="~{index :: copyright}"></div>
+
+		<div th:insert="~{index :: copyright}"></div>
+
 
 
 
